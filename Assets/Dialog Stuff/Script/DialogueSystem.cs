@@ -8,13 +8,12 @@ public class DialogueSystem : MonoBehaviour
     private List<DialogueLine> dialogueLines;
     private int currentIndex = 0;
 
-    private String jsonPath;
+    private string jsonPath;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
-        jsonPath = Path.Combine(Application.dataPath, "Dialogue Stuff/Lines/testdialogue.json");
+        jsonPath = Path.Combine(Application.dataPath, "Dialog Stuff/Lines/td.json");
         dialogueLines = new List<DialogueLine>();
 
         LoadDialogue();
