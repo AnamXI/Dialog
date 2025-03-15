@@ -8,7 +8,7 @@ public class TextArchitect
     private TextMeshPro tmpro_world;
     public TMP_Text tmpro => tmpro_ui != null ? tmpro_ui : tmpro_world;
 
-    public string currentText => tmpro.text;
+    public string currentText = "AAA";
     public string targetText 
     {
         get; 
