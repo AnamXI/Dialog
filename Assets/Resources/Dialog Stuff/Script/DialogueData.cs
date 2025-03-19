@@ -7,6 +7,7 @@ public class DialogueEntry{
     public int id;
     public string character;
     public string text;
+    public string sprite;
 }
 
 [System.Serializable]

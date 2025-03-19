@@ -812,7 +812,7 @@ MonoBehaviour:
     nameText: {fileID: 1900374184}
     dialogueText: {fileID: 1237724983}
     chSprite: {fileID: 746229893}
-  jsonText: {fileID: 4900000, guid: 003d9d912cccb714b8264ee04dacb870, type: 3}
+  json: {fileID: 4900000, guid: 003d9d912cccb714b8264ee04dacb870, type: 3}
 --- !u!1 &374618943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,7 +1074,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1053523972, guid: 088deb46f0e7a4a4aa6f9da87173c7ea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 088deb46f0e7a4a4aa6f9da87173c7ea, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
