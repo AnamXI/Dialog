@@ -811,6 +811,8 @@ MonoBehaviour:
     root: {fileID: 1689659455}
     nameText: {fileID: 1900374184}
     dialogueText: {fileID: 1237724983}
+    chSprite: {fileID: 746229893}
+  jsonText: {fileID: 4900000, guid: 003d9d912cccb714b8264ee04dacb870, type: 3}
 --- !u!1 &374618943
 GameObject:
   m_ObjectHideFlags: 0

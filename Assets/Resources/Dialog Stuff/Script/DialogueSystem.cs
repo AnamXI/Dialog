@@ -2,33 +2,36 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.IO;
 using System;
+using NUnit.Framework.Internal;
+using System.Runtime.CompilerServices;
 public class DialogueSystem : MonoBehaviour
 {
     [SerializeField] private DialogueContainer _dialogueContainer = new DialogueContainer();
     private List<DialogueLine> dialogueLines;
     private int currentIndex = 0;
 
-    private string jsonPath;
+    //private string jsonPath;
+    [SerializeField] private TextAsset jsonText; //Set dialogue json per trigger
 
     void Start()
     {
 
-        jsonPath = Path.Combine(Application.dataPath, "Dialog Stuff/Lines/td.json");
+        //jsonPath = Path.Combine(Application.dataPath, "Dialog Stuff/Lines/td.json");
         dialogueLines = new List<DialogueLine>();
 
-        LoadDialogue();
+        LoadDialogue(jsonText.text);
         DisplayDialogue();
     }
 
 
-    void LoadDialogue()
+    void LoadDialogue(string text)
     {
-        if (File.Exists(jsonPath))
+        if (jsonText!=null)
         {
 
-            string jsonText = File.ReadAllText(jsonPath);
+            //string jsonText = File.ReadAllText(jsonPath);
             
-            DialogueData data = JsonUtility.FromJson<DialogueData>(jsonText);
+            DialogueData data = JsonUtility.FromJson<DialogueData>(text);
             
             
             dialogueLines.Clear();
@@ -51,6 +54,7 @@ public class DialogueSystem : MonoBehaviour
             DialogueLine line = dialogueLines[currentIndex];
             _dialogueContainer.nameText.text = line.character.name;
             _dialogueContainer.dialogueText.text = line.line;
+            //_dialogueContainer.chSprite.sprite = ;
             currentIndex++;
         }else{
             Debug.Log("End of Dialogue");
